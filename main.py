@@ -8,8 +8,7 @@ from gemini_cloud import gemini_client
 load_dotenv()
 
 sentry_client.initialize(api_key=os.getenv("SENTRY_API_KEY"), project_slug=os.getenv("SENTRY_SLUG"))
-gemini_client.initialize(project_id=os.getenv("GCLOUD_PROJECT_ID"))
-
+gemini_client.initialize(project_id=os.getenv("GCLOUD_PROJECT_ID"), model=os.getenv("GCLOUD_MODEL"))
 
 bot.start(
     slack_bot_token=os.getenv("SLACK_BOT_TOKEN"), 

@@ -2,15 +2,6 @@ from datetime import datetime
 import textwrap
 
 def wrap_text(text, width=80):
-  """Wraps a single line of text to a specified width without breaking words.
-
-  Args:
-    text: The text to wrap.
-    width: The maximum line width.
-
-  Returns:
-    The wrapped text as a string.
-  """
   return "\n".join(textwrap.wrap(text, width=width))
 
 def format(data):
